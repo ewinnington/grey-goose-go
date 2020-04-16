@@ -1,1 +1,4 @@
 grey-goose-go.exe
+grey-goose-go-cli/grey-goose-go-cli.exe
+grey-goose-go-srv/grey-goose-go-srv.exe
+*.exe
