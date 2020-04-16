@@ -52,6 +52,48 @@ docker run -d -p 5432:5432 --name pgdb-1 -e POSTGRES_USER=docker -e POSTGRES_PAS
 ## Install required package
 go get github.com/lib/pq
 
+## Build and run
+cd cli-sql-db-pg
+go build
+cli-sql-db-pg.exe
+
 ## Reference
 PGSQL Connection : https://godoc.org/github.com/lib/pq
 PGSQL Commands : https://www.calhoun.io/using-postgresql-with-go/
+
+# Connecting to Redis
+
+Redis is my preferred key value store. I use it as soon as I need a cache and/or events. This particular connector is maybe not the "cutest" but it was recommended as an official one on the Redis website.
+
+## Run my Redis docker
+
+```
+docker run --name redis-1 -p 6379:6379 -d redis
+```
+
+## Install required package
+
+go get github.com/gomodule/redigo/redis
+
+## Build and run
+cd cli-redis
+go build
+cli-redis.exe
+
+## Reference 
+Connector Redis: https://godoc.org/github.com/gomodule/redigo
+
+# Connecting to Rabbit mq
+
+## Launch Rabbitmq in docker
+
+```
+docker run -d --hostname rabbitmq --name rabbit-1 -p 5672:5672 rabbitmq:3.7.18 
+```
+
+## Install required package
+
+go get github.com/streadway/amqp
+
+## Reference
+https://www.rabbitmq.com/tutorials/tutorial-one-go.html
