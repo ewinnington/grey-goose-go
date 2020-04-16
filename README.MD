@@ -95,5 +95,12 @@ docker run -d --hostname rabbitmq --name rabbit-1 -p 5672:5672 rabbitmq:3.7.18
 
 go get github.com/streadway/amqp
 
+## Producer and Consumer on the queue Hello 
+
+```
+go run send.go
+go run receive.go
+```
+
 ## Reference
 https://www.rabbitmq.com/tutorials/tutorial-one-go.html
