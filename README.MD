@@ -1,10 +1,10 @@
 # This is my Go learning repository, where I'm going through the typical use cases I have for a new language
 
-REST Server
-REST Client
-DB Access (Postgres)
-_Redis Access_
-_RabbitMQ Access_
+- REST Server
+- REST Client
+- DB Access (Postgres)
+- Redis Access
+- RabbitMQ Access
 
 # Setup Go on the machine
 https://golang.org/doc/install?download=go1.14.2.windows-amd64.msi
