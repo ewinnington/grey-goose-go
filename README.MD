@@ -12,9 +12,12 @@ https://golang.org/doc/install?download=go1.14.2.windows-amd64.msi
 # HTTP REST Server and Client
 
 ## Install the required package
+```
 go get -u github.com/gorilla/mux
+```
 
 ## Build
+```
 cd ./grey-goose-go-srv
 go build
 
@@ -22,7 +25,7 @@ cd ..
 
 cd ./grey-goose-go-cli
 go build
-
+```
 ## Run 
 The go-srv create a listening go server that answers to http GET and POST Requests on port 8080. 
 The go-cli is a client that pushes a json object to the server with POST and then gets all objects back with a GET
@@ -50,12 +53,16 @@ docker run -d -p 5432:5432 --name pgdb-1 -e POSTGRES_USER=docker -e POSTGRES_PAS
 ```
 
 ## Install required package
+```
 go get github.com/lib/pq
+```
 
 ## Build and run
+```
 cd cli-sql-db-pg
 go build
 cli-sql-db-pg.exe
+```
 
 ## Reference
 PGSQL Connection : https://godoc.org/github.com/lib/pq
@@ -72,14 +79,16 @@ docker run --name redis-1 -p 6379:6379 -d redis
 ```
 
 ## Install required package
-
+```
 go get github.com/gomodule/redigo/redis
+```
 
 ## Build and run
+```
 cd cli-redis
 go build
 cli-redis.exe
-
+```
 ## Reference 
 Connector Redis: https://godoc.org/github.com/gomodule/redigo
 
@@ -92,9 +101,9 @@ docker run -d --hostname rabbitmq --name rabbit-1 -p 5672:5672 rabbitmq:3.7.18
 ```
 
 ## Install required package
-
+```
 go get github.com/streadway/amqp
-
+```
 ## Producer and Consumer on the queue Hello 
 
 ```
